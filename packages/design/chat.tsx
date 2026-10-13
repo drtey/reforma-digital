@@ -672,11 +672,7 @@ export function SourceDetail({
   children?: ReactNode;
 }) {
   return (
-    <article
-      className={
-        'chat-source [&_[data-slot=button][data-variant=default]]:w-full [&_[data-slot=button][data-variant=default]]:min-h-12 [&_[data-slot=button][data-variant=default]]:[font-size:15px]'
-      }
-    >
+    <article className={'chat-source [&_[data-slot=button][data-variant=default]]:w-full'}>
       <p className={'chat-source-eyebrow [margin:0_0_12px] [color:var(--brand)] [font-size:13px]'}>
         {eyebrow}
       </p>

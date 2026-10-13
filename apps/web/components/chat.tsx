@@ -228,7 +228,7 @@ function AnswerActions({
       {negative && (
         <form
           className={
-            'chat-feedback flex gap-2 flex-wrap items-center text-sm [background:rgb(var(--bg-surface-muted))] [padding:14px] [border-radius:16px] mt-4 [&_select]:[max-width:100%] [&_select]:[background:rgb(var(--bg-surface))] [&_select]:[border:1px_solid_rgb(var(--bg-line-strong))] [&_select]:[padding:6px] [&_select]:[border-radius:6px] [&_button]:border-0 [&_button]:[background:rgb(var(--bg-surface))] [&_button]:[border-radius:12px] [&_button]:[padding:6px_10px] [@media(max-width:_800px)]:[&_button]:min-h-11 chat-enter [animation:chat-enter_360ms_var(--ease-brand)_both]'
+            'chat-feedback flex gap-2 flex-wrap items-center text-sm [background:rgb(var(--bg-surface-muted))] [padding:14px] [border-radius:16px] mt-4 [&_select]:[max-width:100%] chat-enter [animation:chat-enter_360ms_var(--ease-brand)_both]'
           }
           onSubmit={(e) => {
             e.preventDefault();
@@ -432,7 +432,7 @@ export default function Chat({
   return (
     <div
       className={
-        'chat-page [body:has(&)]:[overflow-x:clip] [html:has(&)]:[scroll-padding-bottom:calc(var(--chat-dock-height,_160px)_+_16px)] [background:rgb(var(--bg-canvas))] [min-height:100dvh] [max-width:100%] [overflow-x:clip] [color:rgb(var(--bg-ink))] [font-family:var(--bg-font)] text-base [line-height:1.6] [&_button]:[font:inherit] [&_textarea]:[font:inherit] [&_select]:[font:inherit] [&_button]:cursor-pointer [&_button:disabled]:cursor-default [&_:focus-visible]:[outline:3px_solid_rgb(var(--bg-brand-600))] [&_:focus-visible]:[outline-offset:2px] [&_textarea:focus-visible]:outline-none'
+        'chat-page [body:has(&)]:[overflow-x:clip] [html:has(&)]:[scroll-padding-bottom:calc(var(--chat-dock-height,_160px)_+_16px)] [background:rgb(var(--bg-canvas))] [min-height:100dvh] [max-width:100%] [overflow-x:clip] [color:rgb(var(--bg-ink))] [font-family:var(--bg-font)] text-base [line-height:1.6]'
       }
     >
       {header}
