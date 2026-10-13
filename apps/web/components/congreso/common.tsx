@@ -4,6 +4,7 @@ import {
   SelectTrigger,
   SelectValue,
   SelectContent,
+  SelectGroup,
   SelectItem,
 } from '@reforma-digital/design/ui/select';
 import { Card } from '@reforma-digital/design/ui/card';
@@ -562,11 +563,13 @@ export function FilterSelect({
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {options.map((option) => (
-          <SelectItem key={option.value} value={option.value}>
-            {option.label}
-          </SelectItem>
-        ))}
+        <SelectGroup>
+          {options.map((option) => (
+            <SelectItem key={option.value} value={option.value}>
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectGroup>
       </SelectContent>
     </Select>
   );

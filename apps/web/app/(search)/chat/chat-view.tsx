@@ -47,7 +47,7 @@ export function ChatView({
                 aria-label="Nueva conversación"
                 variant="outline"
                 className={
-                  'bs-nueva [@media(max-width:_600px)]:[&_span]:absolute [@media(max-width:_600px)]:[&_span]:[width:1px] [@media(max-width:_600px)]:[&_span]:[height:1px] [@media(max-width:_600px)]:[&_span]:overflow-hidden [@media(max-width:_600px)]:[&_span]:[clip-path:inset(50%)] [@media(max-width:_600px)]:[&_span]:whitespace-nowrap'
+                  'bs-nueva [@media(max-width:_600px)]:[&_span]:absolute [@media(max-width:_600px)]:[&_span]:overflow-hidden [@media(max-width:_600px)]:[&_span]:[clip-path:inset(50%)] [@media(max-width:_600px)]:[&_span]:whitespace-nowrap'
                 }
               >
                 <span>Nueva conversación</span> <Icon name="nueva" size={18} />

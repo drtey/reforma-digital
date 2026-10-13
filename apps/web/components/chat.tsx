@@ -181,8 +181,10 @@ function AnswerActions({
           {feedbackToken && (
             <>
               <Button
+                variant={rating === 1 ? 'secondary' : 'ghost'}
+                size="icon"
                 className={
-                  "chat-icon border-0 [background:transparent] [color:inherit] inline-flex justify-center items-center w-11 h-11 shrink-0 [border-radius:50%] p-0 [transition:background-color_160ms_ease,_color_160ms_ease,_transform_160ms_var(--ease-brand)] [&:not(:disabled):active]:[transform:scale(0.96)] [@media(hover:_hover)_and_(pointer:_fine)]:[&:hover]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[color:rgb(var(--bg-brand-600))] [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
+                  "chat-icon inline-flex justify-center items-center [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
                 }
                 disabled={busy}
                 aria-label="Respuesta útil"
@@ -192,8 +194,10 @@ function AnswerActions({
                 <Icon name="util" size={20} />
               </Button>
               <Button
+                variant={rating === -1 ? 'secondary' : 'ghost'}
+                size="icon"
                 className={
-                  "chat-icon border-0 [background:transparent] [color:inherit] inline-flex justify-center items-center w-11 h-11 shrink-0 [border-radius:50%] p-0 [transition:background-color_160ms_ease,_color_160ms_ease,_transform_160ms_var(--ease-brand)] [&:not(:disabled):active]:[transform:scale(0.96)] [@media(hover:_hover)_and_(pointer:_fine)]:[&:hover]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[color:rgb(var(--bg-brand-600))] [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
+                  "chat-icon inline-flex justify-center items-center [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
                 }
                 disabled={busy}
                 aria-label="Respuesta no útil"
@@ -205,8 +209,10 @@ function AnswerActions({
             </>
           )}
           <Button
+            variant="ghost"
+            size="icon"
             className={
-              "chat-icon border-0 [background:transparent] [color:inherit] inline-flex justify-center items-center w-11 h-11 shrink-0 [border-radius:50%] p-0 [transition:background-color_160ms_ease,_color_160ms_ease,_transform_160ms_var(--ease-brand)] [&:not(:disabled):active]:[transform:scale(0.96)] [@media(hover:_hover)_and_(pointer:_fine)]:[&:hover]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[color:rgb(var(--bg-brand-600))] [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
+              "chat-icon inline-flex justify-center items-center [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
             }
             onClick={() => void copy()}
             aria-label={copied ? 'Copiado' : 'Copiar respuesta'}
@@ -689,8 +695,10 @@ export default function Chat({
               <span>{attachmentBusy ? 'Leyendo PDF…' : attachment?.name}</span>
               {attachment && !attachmentBusy && (
                 <Button
+                  variant="ghost"
+                  size="icon"
                   className={
-                    "chat-icon border-0 [background:transparent] [color:inherit] inline-flex justify-center items-center w-11 h-11 shrink-0 [border-radius:50%] p-0 [transition:background-color_160ms_ease,_color_160ms_ease,_transform_160ms_var(--ease-brand)] [&:not(:disabled):active]:[transform:scale(0.96)] [@media(hover:_hover)_and_(pointer:_fine)]:[&:hover]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[background:rgb(var(--bg-brand-100))] [&[aria-pressed='true']]:[color:rgb(var(--bg-brand-600))] [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
+                    "chat-icon inline-flex justify-center items-center [&[aria-pressed='true']_.icono]:[animation:chat-pulse_320ms_var(--ease-brand)] [@media(prefers-reduced-motion:_reduce)]:[&[aria-pressed='true']_.icono]:[animation:none]"
                   }
                   onClick={() => setAttachment(undefined)}
                   aria-label="Quitar PDF"
@@ -756,9 +764,8 @@ export default function Chat({
           />
           {/* One button for both states so the control never jumps; the glyphs crossfade. */}
           <Button
-            className={
-              'chat-send border-0 [color:rgb(var(--bg-surface))] [background:rgb(var(--bg-ink))] [border-radius:50%] w-11 h-11 flex items-center justify-center shrink-0 p-0 [transition:background-color_150ms_ease,_color_150ms_ease,_transform_160ms_var(--ease-brand)] [&:disabled]:[background:rgb(var(--bg-surface-muted))] [&:disabled]:[color:rgb(var(--bg-ink-subtle))] [@media(hover:_hover)_and_(pointer:_fine)]:[&:not(:disabled):hover]:[background:rgb(var(--bg-brand-700))] [&:not(:disabled):active]:[transform:scale(0.96)] [@media(prefers-reduced-motion:_reduce)]:[transition-duration:0ms] [@media(prefers-reduced-motion:_reduce)]:[:is(&,_.chat-icon):active]:[transform:none]!'
-            }
+            size="icon"
+            className={'chat-send flex items-center justify-center'}
             type={loading ? 'button' : 'submit'}
             onClick={loading ? halt : undefined}
             disabled={!loading && (input.trim().length < 4 || attachmentBusy)}
