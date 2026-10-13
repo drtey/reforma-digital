@@ -42,7 +42,7 @@ export function Header({ current, action }: { current?: string; action?: ReactNo
             href="/#participar"
             data-slot="button"
             data-variant="outline"
-            className={cn(buttonVariants({ variant: 'outline' }))}
+            className={cn(buttonVariants({ variant: 'outline', className: 'text-foreground' }))}
           >
             Participar <Icon name="derecha" size={16} />
           </Link>
